@@ -62,17 +62,25 @@ body{
 }
 
 /* ═══ BACKGROUND FLORALS ═══ */
-.ram-sita-art{
+/* .ram-sita-art{
   position:absolute;
   bottom:0;
   left:50%;
-  transform:translate(-50%, -40px);
+  transform:translate(-50%, -20px);
   width:95%;
   max-width:460px;
   opacity:0.75;
   pointer-events:none;
   z-index:0;
   margin-top: -120px;
+} */
+.ram-sita-art{
+  display:block;
+  width:95%;
+  max-width:460px;
+  margin:20px auto -25px auto;
+  opacity:0.75;
+  pointer-events:none;
 }
 
 .contacts-wrap,
@@ -94,7 +102,7 @@ body{
 }
 
 /* ═══ FLORAL TOP ═══ */
-.floral-top{position:relative;width:100%;height:230px;overflow:visible;pointer-events:none}
+.floral-top{position:relative;width:100%;height:230px;overflow:visible;pointer-events:none;}
 .floral-top svg{position:absolute;top:0;left:0;width:100%;height:100%}
 
 /* ═══ SHLOKAS ═══ */
@@ -113,6 +121,13 @@ body{
 .sh-text.right{text-align:left}
 .sh-icon{flex:0 0 46px;display:flex;justify-content:center;align-items:center}
 .sh-icon svg{width:100%;height:auto;filter:drop-shadow(0 2px 4px rgba(184,146,74,.15))}
+.sh-icon img{
+  width:85px;                /* slightly bigger */
+  height:auto;
+  display:block;
+  margin:auto;
+  opacity: 1;
+}
 
 @keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
@@ -158,6 +173,38 @@ body{
   opacity:0;animation:up .9s .7s ease forwards;
 }
 
+
+/* EVENTS SECTION */
+.events-section{
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+  padding-left:170px;
+}
+
+/* temple artwork */
+.events-art{
+  position:absolute;
+  left:0;
+  top:80px;
+  width:200px;
+  height:auto;
+  opacity:0.70;
+  pointer-events:none;
+}
+
+/* events layout */
+.events-list{
+  width:100%;
+  max-width:360px;
+}
+
+/* keep events aligned right */
+.events-list{
+  width:100%;
+  max-width:360px;
+}
+
 /* ═══ SPRIG DIVIDER ═══ */
 .sprig{width:100%;height:60px;pointer-events:none;display:block}
 
@@ -186,10 +233,13 @@ body{
 /* ═══ EVENTS ═══ */
 .events-list{padding:4px 28px 0}
 .ev{
-  padding:28px 0;
+  padding:12px 0;
   border-bottom:1px solid rgba(184,146,74,.12);
   opacity:0;transform:translateY(14px);
   transition:opacity .7s ease,transform .7s ease;
+}
+.events-list{
+  padding-bottom:10px;
 }
 .ev.show{opacity:1;transform:translateY(0)}
 .ev:last-child{border-bottom:none}
@@ -214,17 +264,17 @@ body{
 .map-btn:hover{background:rgba(184,146,74,.1);border-color:rgba(184,146,74,.6)}
 
 /* ═══ HOST ═══ */
-.host-wrap{padding:52px 32px 0;text-align:center; margin-top: -60px;}
+.host-wrap{padding:20px 32px 0;text-align:center; margin-top: -80px;}
 .host-intro{font-size:clamp(13px,3.5vw,15px);color:var(--text-muted);font-style:italic;line-height:1.9;margin-bottom:14px}
 .host-main{font-family:'Playfair Display',serif;font-size:clamp(19px,5.5vw,25px);color:var(--rose-dark);font-weight:700;margin-bottom:10px;margin-top:-10px;}
 .host-list{font-size:clamp(12px,3.3vw,14px);color:var(--text-light);line-height:2.3}
 .host-parivar{font-style:italic;color:var(--text-muted);font-size:clamp(12px,3.2vw,13.5px)}
 
 /* ═══ CONTACTS ═══ */
-.contacts-wrap{padding:12px 28px 0;text-align:center}
+.contacts-wrap{padding:4px 28px 0;text-align:center}
 .ct-row{
   display:flex;align-items:center;justify-content:center;gap:16px;
-  padding:16px 0;border-bottom:1px solid rgba(184,146,74,.1);
+  padding:8px 0;border-bottom:1px solid rgba(184,146,74,.1);
 }
 .ct-row:last-child{border-bottom:none}
 .ct-name{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,3.8vw,17px);font-weight:600;color:var(--text);min-width:130px;text-align:right}
@@ -233,15 +283,15 @@ body{
 .ct-num:hover{color:var(--rose-dark)}
 
 /* ═══ FLORAL BOTTOM ═══ */
-.floral-bot{position:relative;width:100%;height:320px;overflow:hidden;pointer-events:none}
+.floral-bot{position:relative;width:100%;height: 400px;overflow:visible;pointer-events:none; margin-top: -20px;margin-bottom: 20px;}
 .floral-bot svg{position:absolute;top:0;left:0;width:100%;height:100%}
 
 /* ═══ FOOTER ═══ */
-.footer{padding:20px 24px 80px;text-align:center}
+.footer{padding:0px 24px 10px;text-align:center}
 .foot-wish{font-family:'Playfair Display',serif;
 font-size:clamp(14px,3.8vw,17px);font-style:italic;
 color:var(--rose-dark);line-height:1.85;
-margin-top:-92px; 
+margin-top:10px; 
 margin-bottom:4px}
 .foot-hindi{font-family:'Tiro Devanagari Sanskrit',serif;font-size:12px;color:var(--text-muted);letter-spacing:.8px;margin-bottom:24px}
 .foot-orn{font-size:20px;color:var(--blush);letter-spacing:14px}
@@ -368,18 +418,7 @@ margin-bottom:4px}
       प्रथम निमंत्रण आपको
     </div>
     <div class="sh-icon">
-      <svg viewBox="0 0 50 60" fill="none" stroke="var(--rose-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18,14 L25,4 L32,14 Z" fill="var(--rose-dark)"/>
-        <path d="M22,14 L25,9 L28,14 Z" fill="var(--cream)"/>
-        <path d="M18,18 C10,14 4,22 9,32 C11,36 16,33 16,33" />
-        <path d="M32,18 C40,14 46,22 41,32 C39,36 34,33 34,33" />
-        <path d="M18,18 C18,18 25,14 32,18 C32,18 34,25 32,32 C30,39 25,45 32,50 C36,53 41,50 41,46" />
-        <path d="M19,28 L15,32" />
-        <path d="M31,28 L34,30" />
-        <path d="M21,23 C21,23 22,22 23,23" stroke-width="2.5"/>
-        <path d="M29,23 C29,23 28,22 27,23" stroke-width="2.5"/>
-        <path d="M25,16 L25,20" stroke-width="1.5"/>
-      </svg>
+      <img src="image_1.png" alt="Ganesh Ji">
     </div>
     <div class="sh-text right">
       श्री गणपति महाराज ।<br>
@@ -481,41 +520,44 @@ margin-bottom:4px}
   <div class="sec-label">✦ Join us for ✦</div>
   <div class="sec-title">The Celebrations</div>
 </div>
-
-<div class="events-list">
-  <div class="ev">
-    <div class="ev-top"><span class="ev-ico">🪔</span><span class="ev-n">Tilak Ceremony</span></div>
-    <div class="ev-info">
-      <div class="ev-dt">Wednesday, 15 April 2026 · 7:00 PM</div>
-      <div class="ev-venue">Sohrai Bhawan, Harmu Housing Colony<br>Ranchi, Jharkhand – 834002</div>
+<div class="events-section">
+  <img class="events-art" src="image_3a.png" alt="Temple Art">
+  <div class="events-list">
+    <div class="ev">
+      <div class="ev-top"><span class="ev-ico">🪔</span><span class="ev-n">Tilak Ceremony</span></div>
+      <div class="ev-info">
+        <div class="ev-dt">Wednesday, 15 April 2026 · 7:00 PM</div>
+        <div class="ev-venue">Jharkhand Civil Services Officers Institute<br>Booty Road Ranchi, Jharkhand – 834008</div>
+      </div>
+      <a href="https://maps.app.goo.gl/N4SWP1uVNCedF22P9" target="_blank" class="map-btn">📍 View on Map</a>
     </div>
-    <a href="https://maps.app.goo.gl/N4SWP1uVNCedF22P9" target="_blank" class="map-btn">📍 View on Map</a>
-  </div>
-  <div class="ev">
-    <div class="ev-top"><span class="ev-ico">🌿</span><span class="ev-n">Mehndi Ceremony</span></div>
-    <div class="ev-info">
-      <div class="ev-dt">Sunday, 19 April 2026 · 12:00 PM</div>
-      <div class="ev-venue">Patratu Lake Resort<br>Patratu, Jharkhand – 829119</div>
+    <div class="ev">
+      <div class="ev-top"><span class="ev-ico">🌿</span><span class="ev-n">Mehndi Ceremony</span></div>
+      <div class="ev-info">
+        <div class="ev-dt">Sunday, 19 April 2026 · 12:00 PM</div>
+        <div class="ev-venue">Patratu Lake Resort<br>Patratu, Jharkhand – 829119</div>
+      </div>
+      <a href="https://maps.app.goo.gl/b64eqyRdmrALEnBK6" target="_blank" class="map-btn">📍 View on Map</a>
     </div>
-    <a href="https://maps.app.goo.gl/b64eqyRdmrALEnBK6" target="_blank" class="map-btn">📍 View on Map</a>
-  </div>
-  <div class="ev">
-    <div class="ev-top"><span class="ev-ico">🎶</span><span class="ev-n">Sangeet Ceremony</span></div>
-    <div class="ev-info">
-      <div class="ev-dt">Sunday, 19 April 2026 · 7:00 PM</div>
-      <div class="ev-venue">Patratu Lake Resort<br>Patratu, Jharkhand – 829119</div>
+    <div class="ev">
+      <div class="ev-top"><span class="ev-ico">🎶</span><span class="ev-n">Sangeet Ceremony</span></div>
+      <div class="ev-info">
+        <div class="ev-dt">Sunday, 19 April 2026 · 7:00 PM</div>
+        <div class="ev-venue">Patratu Lake Resort<br>Patratu, Jharkhand – 829119</div>
+      </div>
+      <a href="https://maps.app.goo.gl/b64eqyRdmrALEnBK6" target="_blank" class="map-btn">📍 View on Map</a>
     </div>
-    <a href="https://maps.app.goo.gl/b64eqyRdmrALEnBK6" target="_blank" class="map-btn">📍 View on Map</a>
-  </div>
-  <div class="ev">
-    <div class="ev-top"><span class="ev-ico">💒</span><span class="ev-n" style="color:var(--rose-dark)">Wedding Ceremony</span></div>
-    <div class="ev-info">
-      <div class="ev-dt" style="color:var(--rose-dark)">Monday, 20 April 2026 · 6:00 PM</div>
-      <div class="ev-venue">Patratu Lake Resort<br>Patratu, Jharkhand – 829119</div>
+    <div class="ev">
+      <div class="ev-top"><span class="ev-ico">💒</span><span class="ev-n" style="color:var(--rose-dark)">Wedding Ceremony</span></div>
+      <div class="ev-info">
+        <div class="ev-dt" style="color:var(--rose-dark)">Monday, 20 April 2026 · 6:00 PM</div>
+        <div class="ev-venue">Patratu Lake Resort<br>Patratu, Jharkhand – 829119</div>
+      </div>
+      <a href="https://maps.app.goo.gl/b64eqyRdmrALEnBK6" target="_blank" class="map-btn">📍 View on Map</a>
     </div>
-    <a href="https://maps.app.goo.gl/b64eqyRdmrALEnBK6" target="_blank" class="map-btn">📍 View on Map</a>
   </div>
 </div>
+
 
 <svg class="sprig" style="margin-top:16px;height:50px" viewBox="0 0 480 50" xmlns="http://www.w3.org/2000/svg">
   <g opacity=".28" stroke="#b8c4a0" stroke-width="1" fill="none">
@@ -599,18 +641,15 @@ margin-bottom:4px}
   <ellipse cx="285" cy="153" rx="14" ry="5" fill="#b4c098" transform="rotate(-5,285,153)"/>
 </g>
 </svg>
-</div>
+
 
 
 <div class="footer sr">
   <div class="foot-wish">"Two destinies meet, and forever begins."</div>
   <div class="foot-hindi">सादर निमंत्रण · आपकी उपस्थिति हमारा सौभाग्य है</div>
-  <!-- <div class="foot-orn">✿ ♡ ✿</div>
-  <div class="foot-tag">NIDHI 💍 SRIJAN · APRIL 2026</div> -->
 </div>
-<!-- <div class="wedding-art">
-  <img src="image.png" alt="Ram Sita Wedding">
-</div> -->
+</div>
+
 </div><script>
 /* COUNTDOWN */
 function tick(){
@@ -647,6 +686,8 @@ setInterval(()=>{if(pts.length<18)pts.push(mp())},750);
 function burst(x,y){for(let i=0;i<18;i++)pts.push(mp(x,y,true))}
 document.addEventListener('click',e=>{burst(e.clientX,e.clientY);tryM()});
 document.addEventListener('touchstart',e=>{const t=e.touches[0];burst(t.clientX,t.clientY)},{passive:true});
+/* ensures music starts on first touch on mobile */
+document.addEventListener('touchstart', tryM, {once:true});
 (function anim(){
   cx2.clearRect(0,0,W,H);
   pts=pts.filter(p=>p.a>0&&p.y<H+15);
@@ -667,7 +708,9 @@ let ac=null,playing=false,nodes=[];
 const mb=document.getElementById('musicBtn');
 const NOTES=[261.63,277.18,293.66,311.13,329.63,349.23,369.99,392,415.3,440,466.16,523.25];
 const MEL=[9,7,9,7,5,4,5,7,5,4,2,0,2,4,5,7,9,11,9,7,5,4,5,7,9,7];
-function tryM(){if(!ac&&!playing)startM()}
+function tryM(){
+  if(!playing) startM();
+}
 function tone(f,s,d,g,w='sine'){
   if(!ac)return;
   const o=ac.createOscillator(),gn=ac.createGain();
@@ -690,6 +733,12 @@ function loop(){
 function startM(){try{ac=new(window.AudioContext||window.webkitAudioContext)();playing=true;mb.textContent='🔊';mb.classList.add('playing');loop()}catch(e){}}
 function stopM(){nodes.forEach(n=>{try{n.stop()}catch(e){}});nodes=[];if(ac){ac.close();ac=null;}playing=false;mb.textContent='🎵';mb.classList.remove('playing')}
 mb.addEventListener('click',e=>{e.stopPropagation();playing?stopM():startM()});
+/* AUTO STOP MUSIC WHEN TAB IS NOT ACTIVE */
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden && playing) {
+    stopM();
+  }
+});
 </script>
 </body>
 </html>
